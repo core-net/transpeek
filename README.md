@@ -13,24 +13,26 @@ In our current (first) development phase, here the informations that you have to
       - Router - TP-Link      : to send data to the internet
       - HC-05 Bluetooth Module: to communicate between Arduino and smartphone
 -  Software that we used:
-      - SensoDuino            : an Android app that is used to retrieve all the sensors that Android device had. In this case we only use GPS
+      - GPS Activity Android  : an Android app that is used to retrieve all device's coordinates via GPS that Android device had.
       - Arduino IDE
--  How it works - part SensoDuino, Arduino, HC-05 Bluetooth module (more info check refferal):
+-  How it works - part GPS Activity, Arduino, HC-05 Bluetooth module (more info check refferal):
       1.Implement Arduino Uno and HC-05 Bluetooth module
       2. Connect your Arduino to the laptop
       3. Upload your program to Arduino then open the Serial Monitor on your Arduino IDE
       4. Connect your Android device and HC-05 Bluetooth module via bluetooth paring. Once it is paired, the HC-05 Bluetooth module LED will be blinking once per second
-      5. Once it's connected, run your SensoDuino
+      5. Once it's connected, run your GPS Activity
       6. Check GPS sensor at ON and TX checked box
-      7. Connect your SensoDuino to HC-05 Bluetooth module via bluetooth. Once it is paired, the HC-05 Bluetooth module LED will be blinking twice per second
+      7. Connect your GPS Activity to HC-05 Bluetooth module via bluetooth. Once it is paired, the HC-05 Bluetooth module LED will be blinking twice per second
       8. Check the output on Serial Monitor, when it shows you your current GPS Location from your Android device, then it works
-      9. Store the output to the local-database that you want, e.g result.txt
-      10.Split the latitude and longitude that you retrieve then store it to your database
-      
+      9.Split the latitude and longitude that you retrieve then store it to your database     
+	  
 Refference:
 http://www.techbitar.com/sensoduino.html
+
+P.S: We used android device instead of GPS module to retrieve coordinate of the users and we used TPLink MC 3020 instead of arduino ethernet shield because we're currently don't have any of it. However, we're planning to replace it soon
 
 You may contribute in Transpeek development and using our Transpeek at your applications, web-apps, sms notification, and please credit us, CORE.NET.
 If you have some question, feel free to contact us at:
 - Email   : muhammad.firza.p@gmail.com
 - Website : http://transpeek.com
+
