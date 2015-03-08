@@ -1,0 +1,23 @@
+Documentasi Transpeek
+----------------------
+
+ver 1.0
+
+How it works - part GPS Activity, Arduino, HC-05 Bluetooth module (more info check refferal):
+1. Implement Arduino Uno and HC-05 Bluetooth module
+2. Connect your Arduino to the laptop
+3. Upload your program to Arduino then open the Serial Monitor on your Arduino IDE
+4. Connect your Android device and HC-05 Bluetooth module via bluetooth paring. 5. Once it is paired, the HC-05 Bluetooth module LED will be blinking once per second
+6. Once it's connected, run your GPS Activity
+7. Check GPS sensor at ON and TX checked box
+8. Connect your GPS Activity to HC-05 Bluetooth module via bluetooth. Once it is paired, the HC-05 Bluetooth module LED will be blinking twice per second
+9. Check the output on Serial Monitor, when it shows you your current GPS 
+10. Location from your Android device, then it works 9.Split the latitude and longitude that you retrieve then store it to your database
+
+How it works - part Router:
+1. By default, the router do nothing, to make it run a function that store the database to the internet, we have to add code in /sistem/etc/rc.local
+2. Code in that file is used to open /sistem/root/test.sh whenever the router works
+3. In test.sh file, there are line of codes that is used to loop every single line in apps.transpeek.com and run it through terminal-browser (using wget function), then the locations (latitude and longitude) will be store to /dev/ttyACM0. 
+
+Refference:
+http://www.techbitar.com/sensoduino.html
